@@ -32,6 +32,7 @@
     "@types/jest": "^27.0.3",
     "@types/marked": "^4.0.1",
     "@types/node": "^16.11.12",
+    "@types/plantuml-encoder": "^1.4.0",
     "@vitejs/plugin-vue": "^2.0.0",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^10.0.0",
