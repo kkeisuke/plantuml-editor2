@@ -10,6 +10,9 @@ module.exports = {
     eqeqeq: 'error',
     'dot-notation': 'error',
     camelcase: 'error',
+    '@typescript-eslint/ban-types': 'error',
+    'vue/no-side-effects-in-computed-properties': 'error',
+    'vue/html-self-closing': ['error', { html: { void: 'always' } }],
     'vue/component-name-in-template-casing': ['error', 'kebab-case'], // script setup では動かない? https://github.com/vuejs/eslint-plugin-vue/issues/1629
     'vue/no-duplicate-attr-inheritance': 'error',
     'vue/no-template-target-blank': 'error',
