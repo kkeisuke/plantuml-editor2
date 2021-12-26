@@ -20,6 +20,7 @@
     "dompurify": "^2.3.4",
     "marked": "^4.0.8",
     "monaco-editor": "^0.31.1",
+    "plantuml-encoder": "^1.4.0",
     "vue": "^3.2.26"
   },
   "devDependencies": {
