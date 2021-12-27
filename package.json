@@ -22,6 +22,7 @@
     "marked": "^4.0.8",
     "monaco-editor": "^0.31.1",
     "plantuml-encoder": "^1.4.0",
+    "uuid": "^8.3.2",
     "vue": "^3.2.26"
   },
   "devDependencies": {
@@ -33,6 +34,7 @@
     "@types/marked": "^4.0.1",
     "@types/node": "^16.11.12",
     "@types/plantuml-encoder": "^1.4.0",
+    "@types/uuid": "^8.3.3",
     "@vitejs/plugin-vue": "^2.0.0",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^10.0.0",
