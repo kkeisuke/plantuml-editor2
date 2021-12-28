@@ -58,6 +58,7 @@ const useUmlCodeSingle = () => {
 
   return {
     umlCode: computed(() => state.umlCode),
+    current: computed(() => state.umlCode),
     htmlString: computed(() => htmlString.value),
     read,
     readCache,
