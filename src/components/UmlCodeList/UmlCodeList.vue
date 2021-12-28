@@ -35,7 +35,6 @@ watch(current.value, async () => {
 
 <style scoped>
 .UmlCodeList {
-  width: 14rem;
   overflow-y: auto;
   background-color: #222;
 }
