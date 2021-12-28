@@ -1,0 +1,14 @@
+@startuml
+
+object Car
+object Bus
+object Tire
+object Engine
+object Driver
+
+Car <|- Bus
+Car *-down- Tire
+Car *-down- Engine
+Bus o-down- Driver
+
+@enduml

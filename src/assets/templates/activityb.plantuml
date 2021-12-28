@@ -1,0 +1,15 @@
+@startuml
+
+|A Section|
+start
+:step1;
+|#AntiqueWhite|B Section|
+:step2;
+:step3;
+|A Section|
+:step4;
+|B Section|
+:step5;
+stop
+
+@enduml

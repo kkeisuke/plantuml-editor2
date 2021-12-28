@@ -1,0 +1,18 @@
+@startuml
+
+autonumber
+
+A -> B: step
+
+activate B
+B -> C: step
+
+activate C
+C --> C: action
+C -> B: step
+deactivate C
+
+B -> A: step
+deactivate B
+
+@enduml
