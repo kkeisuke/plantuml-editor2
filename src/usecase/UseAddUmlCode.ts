@@ -4,7 +4,7 @@ import classTemplate from '@/assets/templates/class.plantuml?raw'
 import erTemplate from '@/assets/templates/er.plantuml?raw'
 import objectTemplate from '@/assets/templates/object.plantuml?raw'
 import sequenceTemplate from '@/assets/templates/sequence.plantuml?raw'
-import usecaseTemplate from '@/assets/templates/sequence.plantuml?raw'
+import usecaseTemplate from '@/assets/templates/usecase.plantuml?raw'
 
 import { injectUseUmlCodeCollection } from '@/store/UseUmlCodeCollection'
 import { injectUseUmlCodeSingle } from '@/store/UseUmlCodeSingle'
