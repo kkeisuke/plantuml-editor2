@@ -45,6 +45,11 @@ const useUmlCodeSingle = () => {
     }
   }
 
+  const setCurrentHtml = () => {
+    const { md } = convertToMd(state.umlCode.code, { server: import.meta.env.VITE_PLANTUML_SERVER })
+    htmlString.value = convertToHtml(md)
+  }
+
   const renderHtml = async (code: UmlCode['code']) => {
     if (!state.umlCode.id) {
       return
@@ -65,6 +70,7 @@ const useUmlCodeSingle = () => {
     getCode,
     update,
     destroy,
+    setCurrentHtml,
     renderHtml
   }
 }
