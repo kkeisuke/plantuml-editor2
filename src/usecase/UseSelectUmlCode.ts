@@ -4,11 +4,11 @@ import { injectUseUmlCodeSingle } from '@/store/UseUmlCodeSingle'
 
 export const useSelectUmlCode = () => {
   const { fetch } = injectUseUmlCodeCollection()
-  const { read, destroy, getCode, renderHtml } = injectUseUmlCodeSingle()
+  const { read, destroy, setCurrentHtml } = injectUseUmlCodeSingle()
 
   const selectUmlCode = async (id: UmlCode['id']) => {
     await read(id)
-    await renderHtml(getCode())
+    await setCurrentHtml()
   }
 
   const deleteUmlCode = async (umlCode: UmlCode) => {
