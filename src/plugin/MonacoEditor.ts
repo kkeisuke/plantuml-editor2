@@ -6,6 +6,7 @@ const defaultOptions: monaco.editor.IStandaloneEditorConstructionOptions = {
   minimap: {
     enabled: false
   },
+  tabSize: 2,
   language: 'apex',
   theme: 'vs-dark'
 }
