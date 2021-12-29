@@ -11,7 +11,7 @@ const onClick = () => {
 </script>
 
 <template>
-  <svg role="button" class="SideMenuBtn text-secondary" @click="onClick">
+  <svg role="button" class="SideMenuBtn text-white-50" @click="onClick">
     <use :href="`${isShowMenu ? chevronLeft : chevronRight}#icon`" />
   </svg>
 </template>
