@@ -3,7 +3,7 @@ import { umlCodeCacheRepository } from '@/repository/UmlCodeCacheRepository'
 import { umlCodeSingleRepository } from '@/repository/UmlCodeSingleRepository'
 import { getDefaultUmlCode, UmlCode } from '@/entities/UmlCode'
 import { convertToMd } from '@/lib/UmlCodeConverter'
-import { convertToHtml } from '@/plugin/marked'
+import { convertToHtml } from '@/plugin/Marked'
 
 const useUmlCodeSingle = () => {
   const state = reactive({
