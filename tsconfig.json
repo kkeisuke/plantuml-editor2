@@ -18,5 +18,5 @@
     "types": ["jest"],
     "skipLibCheck": true
   },
-  "include": ["vite.config.*", "env.d.ts", "src/**/*", "src/**/*.ts", "src/**/*.vue"]
+  "include": ["vite.config.*", "env.d.ts", "src/**/*", "src/**/*.vue"]
 }
