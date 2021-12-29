@@ -1,21 +1,14 @@
-# PlantUML Editor
-
-1. select template
-2. write uml diagram
-
-Preview is Ctrl-Enter or Cmd-Enter
-
 @startuml
 
-left to right direction
+!theme sketchy-outline
 
-actor User
+start
 
-User --> (1. select template)
-User --> (2. write uml diagram)
+:select template;
+:write uml diagram;
+:Ctrl-Enter or Cmd-Enter;
+:Preview;
 
-legend center
-  Preview is Ctrl-Enter or Cmd-Enter
-endlegend
+stop
 
 @enduml
