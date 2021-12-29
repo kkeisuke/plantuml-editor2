@@ -11,6 +11,7 @@ const { htmlString } = injectUseUmlCodeSingle()
 <style scoped>
 .UmlCodePreview {
   padding: 1rem;
+  overflow: auto;
 }
 </style>
 
