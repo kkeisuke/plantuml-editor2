@@ -3,6 +3,8 @@
 1. select template
 2. write uml diagram
 
+Preview is Ctrl-Enter or Cmd-Enter
+
 @startuml
 
 left to right direction
@@ -11,5 +13,9 @@ actor User
 
 User --> (1. select template)
 User --> (2. write uml diagram)
+
+legend center
+  Preview is Ctrl-Enter or Cmd-Enter
+endlegend
 
 @enduml
