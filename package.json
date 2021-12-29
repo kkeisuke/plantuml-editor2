@@ -29,6 +29,7 @@
     "@cypress/vite-dev-server": "^2.2.1",
     "@cypress/vue": "^3.0.5",
     "@rushstack/eslint-patch": "^1.1.0",
+    "@types/bootstrap": "^5.1.6",
     "@types/dompurify": "^2.3.2",
     "@types/jest": "^27.0.3",
     "@types/marked": "^4.0.1",
