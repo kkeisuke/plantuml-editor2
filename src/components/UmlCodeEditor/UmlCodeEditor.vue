@@ -2,8 +2,9 @@
 import { onMounted, watch } from 'vue'
 import { createEditor, KeyCode, KeyMod } from '@/plugin/MonacoEditor'
 import { injectUseUmlCodeSingle } from '@/store/UseUmlCodeSingle'
+import defaultTemplate from '@/assets/templates/default.plantuml?raw'
 
-const { umlCode, getCode, readCache, update, setCurrentHtml, renderHtml } = injectUseUmlCodeSingle()
+const { current, getCode, readCache, update, setCurrentHtml, renderHtml } = injectUseUmlCodeSingle()
 const CLASS_NAME = 'UmlCodeEditor'
 
 onMounted(async () => {
@@ -17,7 +18,7 @@ onMounted(async () => {
   }
 
   const editor = createEditor(editorElm, {
-    value: getCode()
+    value: getCode() || defaultTemplate
   })
   editor.onDidChangeModelContent(async (event) => {
     !event.isFlush && (await update(editor.getValue()))
@@ -30,7 +31,7 @@ onMounted(async () => {
   })
 
   watch(
-    () => umlCode.value.id,
+    () => current.value.id,
     (id) => {
       if (id) {
         editor.setValue(getCode())
@@ -41,7 +42,11 @@ onMounted(async () => {
   )
 
   // 初回描画
-  await setCurrentHtml()
+  if (current.value.id) {
+    await setCurrentHtml()
+  } else {
+    await setCurrentHtml(defaultTemplate)
+  }
 })
 </script>
 

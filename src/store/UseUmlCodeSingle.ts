@@ -45,8 +45,8 @@ const useUmlCodeSingle = () => {
     }
   }
 
-  const setCurrentHtml = () => {
-    const { md } = convertToMd(state.umlCode.code, { server: import.meta.env.VITE_PLANTUML_SERVER })
+  const setCurrentHtml = (code?: string) => {
+    const { md } = convertToMd(code || state.umlCode.code, { server: import.meta.env.VITE_PLANTUML_SERVER })
     htmlString.value = convertToHtml(md)
   }
 
@@ -62,7 +62,6 @@ const useUmlCodeSingle = () => {
   }
 
   return {
-    umlCode: computed(() => state.umlCode),
     current: computed(() => state.umlCode),
     htmlString: computed(() => htmlString.value),
     read,
