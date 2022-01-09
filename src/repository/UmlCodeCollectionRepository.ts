@@ -1,13 +1,12 @@
 import { v4 } from 'uuid'
 import { umlCodeRepository } from '@/repository/UmlCodeRepository'
 import { UmlCode } from '@/entities/UmlCode'
-import { getNow } from '@/lib/DateTimeFormat'
 
 export const umlCodeCollectionRepository = {
   add(umlCode: UmlCode) {
     umlCode.id = v4()
-    umlCode.createdAt = getNow()
-    umlCode.updatedAt = getNow()
+    umlCode.createdAt = Date.now()
+    umlCode.updatedAt = Date.now()
     return umlCodeRepository.table().add(umlCode)
   },
   fetch() {

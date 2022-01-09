@@ -1,6 +1,5 @@
 import { umlCodeRepository } from '@/repository/UmlCodeRepository'
 import { UmlCode } from '@/entities/UmlCode'
-import { getNow } from '@/lib/DateTimeFormat'
 
 export const umlCodeSingleRepository = {
   async read(id: UmlCode['id']) {
@@ -17,7 +16,7 @@ export const umlCodeSingleRepository = {
     if (!umlCode.id) {
       throw new Error('empty id')
     }
-    umlCode.updatedAt = getNow()
+    umlCode.updatedAt = Date.now()
     const result = await umlCodeRepository.table().update(umlCode.id, umlCode)
     if (!result) {
       throw new Error('error update')
