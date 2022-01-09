@@ -26,7 +26,7 @@ const { isShowMenu, isShowCheatSheet } = provideUseLayout()
 <style scoped>
 .PlantumlEditor {
   display: grid;
-  grid-template-columns: auto auto auto 1fr;
+  grid-template-columns: auto auto auto minmax(40rem, 1fr);
   grid-template-rows: auto 1fr;
   height: 100vh;
 }
