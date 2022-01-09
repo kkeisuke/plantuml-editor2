@@ -5,7 +5,7 @@ import OpenBtn from '@/components/UmlCodeList/OpenBtn.vue'
 import { injectUseUmlCodeCollection } from '@/store/UseUmlCodeCollection'
 import { injectUseUmlCodeSingle } from '@/store/UseUmlCodeSingle'
 import { useSelectUmlCode } from '@/usecase/UseSelectUmlCode'
-import { formatDate } from '@/lib/DateTimeFormat'
+// import { formatDate } from '@/lib/DateTimeFormat'
 
 const { selectUmlCode, deleteUmlCode } = useSelectUmlCode()
 const { umlCodes, fetch } = injectUseUmlCodeCollection()
@@ -24,9 +24,9 @@ watch(current.value, async () => {
   <div class="UmlCodeList">
     <ul class="list-group list-group-flush">
       <li v-for="umlCode in umlCodes" :key="umlCode.id" :class="{ current: umlCode.id === current.id }" class="umlCodeItem list-group-item p-2">
-        <p class="text-center">
+        <!-- <p class="text-center">
           <small>{{ formatDate(umlCode.updatedAt) }}</small>
-        </p>
+        </p> -->
         <div v-for="img in umlCode.imgs" :key="img" class="position-relative">
           <img :src="img" role="button" class="umlCodeImg" loading="lazy" @click="selectUmlCode(umlCode.id)" />
           <open-btn :src="img" class="position-absolute bottom-0 end-0" />
