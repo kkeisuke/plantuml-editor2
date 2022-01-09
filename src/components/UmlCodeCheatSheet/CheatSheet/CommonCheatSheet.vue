@@ -11,6 +11,16 @@ const url = `${import.meta.env.VITE_PLANTUML_SERVER}/svg/`
     <table class="table table-bordered table-hover">
       <tbody>
         <tr>
+          <td>
+            <span>{{ common.theme.title }}</span>
+            <br />
+            <a href="https://bschwarz.github.io/puml-themes/gallery.html" target="_blank" rel="noopener noreferrer">theme gallery</a>
+          </td>
+          <td>
+            <copyable-code>{{ common.theme.text }}</copyable-code> sketchy-outline
+          </td>
+        </tr>
+        <tr>
           <td>{{ common.header.title }}</td>
           <td>
             <copyable-pre>{{ common.header.text }}</copyable-pre>

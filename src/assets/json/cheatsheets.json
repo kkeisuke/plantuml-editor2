@@ -1,5 +1,9 @@
 {
   "common": {
+    "theme": {
+      "title": "theme",
+      "text": "!theme"
+    },
     "header": {
       "title": "header",
       "text": "center header\n\nendheader"
