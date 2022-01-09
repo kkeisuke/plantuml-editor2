@@ -2,6 +2,7 @@
 import TemplateMenu from '@/components/AppHeader/TemplateMenu.vue'
 import SideMenuBtn from '@/components/AppHeader/SideMenuBtn.vue'
 import CheatSheetSwitch from '@/components/AppHeader/CheatSheetSwitch.vue'
+import IconLinks from '@/components/AppHeader/IconLinks.vue'
 </script>
 
 <template>
@@ -13,7 +14,9 @@ import CheatSheetSwitch from '@/components/AppHeader/CheatSheetSwitch.vue'
         <ul class="navbar-nav flex-row align-items-center gap-3 me-4">
           <template-menu />
         </ul>
-        <cheat-sheet-switch />
+        <cheat-sheet-switch class="me-5" />
+        <div class="navbar-text">Preview is Ctrl-Enter or Cmd-Enter</div>
+        <icon-links class="ms-auto" />
       </div>
     </nav>
   </header>
