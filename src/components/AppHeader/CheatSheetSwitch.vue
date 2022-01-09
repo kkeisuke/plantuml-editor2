@@ -15,7 +15,7 @@ const onChange = () => {
 <template>
   <div class="form-check form-switch m-0">
     <input id="CheatSheetSwitch" v-model="cheatSheetSwitch" class="form-check-input" type="checkbox" role="button" @change="onChange" />
-    <label class="form-check-label text-secondary" for="CheatSheetSwitch" role="button">Show Cheat Sheets</label>
+    <label class="form-check-label text-white-50" for="CheatSheetSwitch" role="button">Cheat Sheets</label>
   </div>
 </template>
 
