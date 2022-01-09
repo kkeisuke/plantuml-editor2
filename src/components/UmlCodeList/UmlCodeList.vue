@@ -23,7 +23,7 @@ watch(current.value, async () => {
 <template>
   <div class="UmlCodeList">
     <ul class="list-group list-group-flush">
-      <li v-for="umlCode in umlCodes" :key="umlCode.id" :class="{ 'list-group-item-secondary': umlCode.id === current.id }" class="umlCodeItem list-group-item p-2">
+      <li v-for="umlCode in umlCodes" :key="umlCode.id" :class="{ current: umlCode.id === current.id }" class="umlCodeItem list-group-item p-2">
         <p class="text-center">
           <small>{{ formatDate(umlCode.updatedAt) }}</small>
         </p>
@@ -42,7 +42,8 @@ watch(current.value, async () => {
   overflow-y: auto;
   background-color: #222;
 }
-.umlCodeItem:hover {
+.umlCodeItem:hover,
+.umlCodeItem.current {
   background-color: var(--bs-gray-300);
 }
 .umlCodeImg {
