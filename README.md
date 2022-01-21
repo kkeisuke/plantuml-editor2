@@ -1,6 +1,12 @@
-# plantuml-editor2
+# PlantUML Editor 2
 
-This template should help get you started developing with Vue 3 in Vite.
+PlantUML online demo client
+
+- Vue 3
+- TypeScript
+- Vite
+
+![PlantUML Editor 2](https://repository-images.githubusercontent.com/441818722/9774f41a-5a82-427d-a2ef-3c0ca27526e1)
 
 ## Recommended IDE Setup
 
@@ -46,3 +52,11 @@ npm run test:unit # or `npm run test:unit:ci` for headless testing
 npm run build
 npm run test:e2e # or `npm run test:e2e:ci` for headless testing
 ```
+
+### [PlantUML Server with Docker](https://hub.docker.com/r/plantuml/plantuml-server/)
+
+```sh
+docker run -d -p 4000:8080 plantuml/plantuml-server:jetty
+```
+
+> **Notice:** The specification of the port number follows `.env.development`
