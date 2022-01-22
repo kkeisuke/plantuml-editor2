@@ -1,7 +1,7 @@
 import { encode } from 'plantuml-encoder'
 
-const startuml = ['@startuml', '@startmindmap', '@startditaa', '@startgantt', '@startwbs']
-const enduml = ['@enduml', '@endmindmap', '@endditaa', '@endgantt', '@endwbs']
+const startuml = ['@startuml', '@startmindmap', '@startditaa', '@startgantt', '@startwbs', '@startjson', '@startyaml']
+const enduml = ['@enduml', '@endmindmap', '@endditaa', '@endgantt', '@endwbs', '@endjson', '@endyaml']
 
 export const parser = (code: string) => {
   const lines = code.split('\n')
