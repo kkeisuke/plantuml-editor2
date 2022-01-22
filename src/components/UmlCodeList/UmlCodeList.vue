@@ -49,7 +49,7 @@ img {
   background-color: #fff;
 }
 .secondary {
-  max-width: 50%;
+  max-width: calc(50% - 0.125rem);
 }
 .secondary img {
   height: 3.5rem;
