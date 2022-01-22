@@ -21,14 +21,14 @@ watch(current.value, async () => {
 </script>
 
 <template>
-  <div class="UmlCodeList">
+  <div class="overflow-auto bg-dark">
     <ul class="list-group list-group-flush">
-      <li v-for="umlCode in umlCodes" :key="umlCode.id" :class="{ current: umlCode.id === current.id }" class="umlCodeItem list-group-item p-2">
+      <li v-for="umlCode in umlCodes" :key="umlCode.id" :class="{ current: umlCode.id === current.id }" class="list-group-item p-2 d-flex flex-wrap gap-1">
         <!-- <p class="text-center">
           <small>{{ formatDate(umlCode.updatedAt) }}</small>
         </p> -->
-        <div v-for="img in umlCode.imgs" :key="img" class="position-relative">
-          <img :src="img" role="button" class="umlCodeImg" loading="lazy" @click="selectUmlCode(umlCode.id)" />
+        <div v-for="(img, index) in umlCode.imgs" :key="img" :class="{ 'w-100': !index, 'secondary flex-grow-1': index }" class="position-relative">
+          <img :src="img" role="button" loading="lazy" @click="selectUmlCode(umlCode.id)" />
           <open-btn :src="img" class="position-absolute bottom-0 end-0" />
         </div>
         <delete-btn class="position-absolute bottom-0 start-0 mb-2 ms-2" @delete="deleteUmlCode(umlCode)" />
@@ -38,17 +38,20 @@ watch(current.value, async () => {
 </template>
 
 <style scoped>
-.UmlCodeList {
-  overflow-y: auto;
-  background-color: #222;
-}
-.umlCodeItem:hover,
-.umlCodeItem.current {
+li:hover,
+li.current {
   background-color: var(--bs-gray-300);
 }
-.umlCodeImg {
+img {
   width: 100%;
   height: 14rem;
   object-fit: scale-down;
+  background-color: #fff;
+}
+.secondary {
+  max-width: 50%;
+}
+.secondary img {
+  height: 3.5rem;
 }
 </style>

@@ -23,8 +23,8 @@ const onClick = () => {
 
 <style scoped>
 .OpenBtn {
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
   background-color: #fff;
 }
 </style>
