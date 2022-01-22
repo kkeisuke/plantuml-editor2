@@ -7,6 +7,9 @@ DOMPurify.addHook('afterSanitizeAttributes', (node) => {
     node.setAttribute('target', '_blank')
     node.setAttribute('rel', 'noopener noreferrer')
   }
+  if (node.tagName.toLowerCase() === 'table') {
+    node.className = 'table table-hover'
+  }
 })
 
 export const convertToHtml = (md: string) => {
