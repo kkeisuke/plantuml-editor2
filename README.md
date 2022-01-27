@@ -5,6 +5,7 @@ PlantUML online demo client
 - Vue 3
 - TypeScript
 - Vite
+- Vitest
 
 ![PlantUML Editor 2](https://repository-images.githubusercontent.com/441818722/9774f41a-5a82-427d-a2ef-3c0ca27526e1)
 
