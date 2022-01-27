@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest'
 import { convertToMd, parser } from '../../src/lib/UmlCodeConverter'
 
 describe('UmlCodeParser', () => {
