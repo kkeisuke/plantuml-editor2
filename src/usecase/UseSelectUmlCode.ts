@@ -1,4 +1,4 @@
-import { UmlCode } from '@/entities/UmlCode'
+import type { UmlCode } from '@/entities/UmlCode'
 import { injectUseUmlCodeCollection } from '@/store/UseUmlCodeCollection'
 import { injectUseUmlCodeSingle } from '@/store/UseUmlCodeSingle'
 

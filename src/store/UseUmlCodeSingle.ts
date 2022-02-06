@@ -1,7 +1,7 @@
-import { computed, inject, InjectionKey, provide, reactive, ref, toRaw } from 'vue'
+import { computed, inject, type InjectionKey, provide, reactive, ref, toRaw } from 'vue'
 import { umlCodeCacheRepository } from '@/repository/UmlCodeCacheRepository'
 import { umlCodeSingleRepository } from '@/repository/UmlCodeSingleRepository'
-import { getDefaultUmlCode, UmlCode } from '@/entities/UmlCode'
+import { getDefaultUmlCode, type UmlCode } from '@/entities/UmlCode'
 import { convertToMd } from '@/lib/UmlCodeConverter'
 import { convertToHtml } from '@/plugin/Marked'
 

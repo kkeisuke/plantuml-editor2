@@ -1,4 +1,4 @@
-import { computed, inject, InjectionKey, provide, ref } from 'vue'
+import { computed, inject, type InjectionKey, provide, ref } from 'vue'
 
 const useLayout = () => {
   const isShowMenu = ref(true)

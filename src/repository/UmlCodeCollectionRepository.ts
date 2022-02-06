@@ -1,6 +1,6 @@
 import { v4 } from 'uuid'
 import { umlCodeRepository } from '@/repository/UmlCodeRepository'
-import { UmlCode } from '@/entities/UmlCode'
+import type { UmlCode } from '@/entities/UmlCode'
 
 export const umlCodeCollectionRepository = {
   add(umlCode: UmlCode) {

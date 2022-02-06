@@ -1,4 +1,4 @@
-import { UmlCode } from '@/entities/UmlCode'
+import type { UmlCode } from '@/entities/UmlCode'
 
 const CASH_UML_CODE_ID = 'CASH_UML_CODE_ID'
 

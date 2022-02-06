@@ -1,5 +1,5 @@
 import Dexie from 'dexie'
-import { UmlCode } from '@/entities/UmlCode'
+import type { UmlCode } from '@/entities/UmlCode'
 
 const umlCode: Record<keyof UmlCode, string> = {
   id: '&', // primary key

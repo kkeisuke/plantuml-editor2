@@ -1,5 +1,5 @@
 import { umlCodeRepository } from '@/repository/UmlCodeRepository'
-import { UmlCode } from '@/entities/UmlCode'
+import type { UmlCode } from '@/entities/UmlCode'
 
 export const umlCodeSingleRepository = {
   async read(id: UmlCode['id']) {

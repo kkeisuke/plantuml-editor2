@@ -1,6 +1,6 @@
-import { computed, inject, InjectionKey, provide, reactive } from 'vue'
+import { computed, inject, type InjectionKey, provide, reactive } from 'vue'
 import { umlCodeCollectionRepository } from '@/repository/UmlCodeCollectionRepository'
-import { getDefaultUmlCode, UmlCode } from '@/entities/UmlCode'
+import { getDefaultUmlCode, type UmlCode } from '@/entities/UmlCode'
 
 type State = {
   umlCodes: UmlCode[]
