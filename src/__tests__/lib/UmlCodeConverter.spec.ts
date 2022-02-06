@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { convertToMd, parser } from '../../src/lib/UmlCodeConverter'
+import { convertToMd, parser } from '../../lib/UmlCodeConverter'
 
 describe('UmlCodeParser', () => {
   describe('parser', () => {
