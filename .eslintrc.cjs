@@ -2,7 +2,8 @@
 require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
-  extends: ['plugin:vue/vue3-recommended', '@vue/eslint-config-typescript/recommended', '@vue/eslint-config-prettier'],
+  root: true,
+  extends: ['plugin:vue/vue3-recommended', 'eslint:recommended', '@vue/eslint-config-typescript/recommended', '@vue/eslint-config-prettier'],
   env: {
     'vue/setup-compiler-macros': true
   },
@@ -24,12 +25,11 @@ module.exports = {
     'vue/eqeqeq': 'error', // for template
     'no-console': 'error',
     'no-debugger': 'error'
-  }
+  },
+  overrides: [
+    {
+      files: ['cypress/integration/**.spec.{js,ts,jsx,tsx}'],
+      extends: ['plugin:cypress/recommended']
+    }
+  ]
 }
-
-module.exports.overrides = [
-  {
-    files: ['**/__tests__/*.spec.{js,ts,jsx,tsx}', 'cypress/integration/**.spec.{js,ts,jsx,tsx}'],
-    extends: ['plugin:cypress/recommended']
-  }
-]

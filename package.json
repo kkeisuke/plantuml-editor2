@@ -4,12 +4,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "lint": "eslint 'src/**/*.{ts,js,vue}' --fix",
-    "lint:ci": "eslint 'src/**/*.{ts,js,vue}'",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "lint:ci": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
     "preview": "vite preview --port 5050",
-    "test:vitest": "vitest",
-    "test:unit": "cypress open-ct",
-    "test:unit:ci": "cypress run-ct --quiet --reporter spec",
+    "test:unit": "vitest --environment jsdom",
     "test:e2e": "start-server-and-test preview http://127.0.0.1:5050/ 'cypress open'",
     "test:e2e:ci": "start-server-and-test preview http://127.0.0.1:5050/ 'cypress run'",
     "typecheck": "vue-tsc --noEmit"
