@@ -7,20 +7,12 @@ const { htmlString } = injectUseUmlCodeSingle()
 </script>
 
 <template>
-  <div class="overflow-hidden">
+  <div class="d-flex flex-column overflow-hidden">
     <preview-toolbar />
     <!-- eslint-disable-next-line vue/no-v-html -->
-    <div class="PreviewMd" v-html="htmlString" />
+    <div class="PreviewMd flex-grow-1 pt-3 px-3 pb-0 overflow-auto" v-html="htmlString" />
   </div>
 </template>
-
-<style scoped>
-.PreviewMd {
-  padding: 1rem 1rem 0;
-  height: 100%;
-  overflow: auto;
-}
-</style>
 
 <style>
 .PreviewMd img {
