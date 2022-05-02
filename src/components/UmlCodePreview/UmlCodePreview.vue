@@ -16,10 +16,8 @@ const { htmlString } = injectUseUmlCodeSingle()
 
 <style>
 .PreviewMd img {
-  width: 100%;
-  max-height: 50rem;
+  min-width: 100%;
+  height: calc(50rem * v-bind('imgSize'));
   object-fit: contain;
-  transform: scale(v-bind('imgSize'));
-  transform-origin: top left;
 }
 </style>
