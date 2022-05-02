@@ -20,5 +20,6 @@ const { htmlString } = injectUseUmlCodeSingle()
   max-height: 50rem;
   object-fit: contain;
   transform: scale(v-bind('imgSize'));
+  transform-origin: top left;
 }
 </style>
