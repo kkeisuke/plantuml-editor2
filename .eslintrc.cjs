@@ -23,6 +23,7 @@ module.exports = {
     'vue/v-on-function-call': 'error',
     'vue/dot-notation': 'error', // for template
     'vue/eqeqeq': 'error', // for template
+    'vue/multi-word-component-names': 'off',
     'no-console': 'error',
     'no-debugger': 'error'
   },
