@@ -18,6 +18,7 @@ const { htmlString } = injectUseUmlCodeSingle()
 .PreviewMd .uml {
   display: flex;
   justify-content: center;
+  align-items: center; /* for safari */
 }
 .PreviewMd .uml object {
   width: calc(50rem * v-bind('imgSize'));
