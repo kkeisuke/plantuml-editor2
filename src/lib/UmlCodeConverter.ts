@@ -31,6 +31,10 @@ export type ConvertOptions = {
   ext?: string
 }
 
+export const createUmlTag = (uml: string) => {
+  return `<div class="uml"><object type="image/svg+xml" data="${uml}"></object></div>`
+}
+
 export const convertToMd = (code: string, { server, ext = 'svg' }: ConvertOptions) => {
   const parserd = parser(code)
   const imgs: string[] = []
@@ -41,7 +45,7 @@ export const convertToMd = (code: string, { server, ext = 'svg' }: ConvertOption
       const encoded = encode(md)
       const uml = `${server}/${ext}/${encoded}`
       imgs.push(uml)
-      return `![](${uml})`
+      return createUmlTag(uml)
     }
     return md
   })

@@ -15,9 +15,11 @@ const { htmlString } = injectUseUmlCodeSingle()
 </template>
 
 <style>
-.PreviewMd img {
-  min-width: 100%;
-  height: calc(50rem * v-bind('imgSize'));
-  object-fit: contain;
+.PreviewMd .uml {
+  display: flex;
+  justify-content: center;
+}
+.PreviewMd .uml object {
+  width: calc(50rem * v-bind('imgSize'));
 }
 </style>
