@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { convertToMd, parser } from '../../lib/UmlCodeConverter'
+import { convertToMd, createUmlTag, parser } from '../../lib/UmlCodeConverter'
 
 describe('UmlCodeParser', () => {
   describe('parser', () => {
@@ -42,7 +42,7 @@ describe('UmlCodeParser', () => {
   describe('convertToMd', () => {
     const uml = '@startuml\n\nobject テスト\n\n@enduml'
     const img = 'http://localhost/svg/SoWkIImgAStDuUBAJyfAJIvHUDpSzhXfv-Fc3YukXzIy5A0K0000'
-    const encoded = `![](${img})`
+    const encoded = createUmlTag(img)
 
     it('UMLが一つの場合', () => {
       const code = `# スタート\n\n${uml}\n\n# エンド`

@@ -13,5 +13,5 @@ DOMPurify.addHook('afterSanitizeAttributes', (node) => {
 })
 
 export const convertToHtml = (md: string) => {
-  return DOMPurify.sanitize(marked(md))
+  return DOMPurify.sanitize(marked(md), { ADD_TAGS: ['object'], ADD_ATTR: ['data'] })
 }
