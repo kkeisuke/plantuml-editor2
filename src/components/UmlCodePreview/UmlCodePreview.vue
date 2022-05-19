@@ -8,7 +8,7 @@ const { htmlString } = injectUseUmlCodeSingle()
 
 <template>
   <div class="d-flex flex-column overflow-hidden">
-    <preview-toolbar />
+    <preview-toolbar class="flex-shrink-0" />
     <!-- eslint-disable-next-line vue/no-v-html -->
     <div class="PreviewMd flex-grow-1 pt-3 px-3 pb-0 overflow-auto" v-html="htmlString" />
   </div>
