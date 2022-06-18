@@ -2,12 +2,18 @@ import { computed, inject, type InjectionKey, provide, reactive, ref, toRaw } fr
 import { umlCodeCacheRepository } from '@/repository/UmlCodeCacheRepository'
 import { umlCodeSingleRepository } from '@/repository/UmlCodeSingleRepository'
 import { getDefaultUmlCode, type UmlCode } from '@/entities/UmlCode'
-import { convertToMd } from '@/lib/UmlCodeConverter'
+import { convertToMd, imgExts, type ImgExts } from '@/lib/UmlCodeConverter'
 import { convertToHtml } from '@/plugin/Marked'
 
+type State = {
+  umlCode: UmlCode
+  imgExt: ImgExts
+}
+
 const useUmlCodeSingle = () => {
-  const state = reactive({
-    umlCode: getDefaultUmlCode()
+  const state = reactive<State>({
+    umlCode: getDefaultUmlCode(),
+    imgExt: imgExts[0]
   })
   const htmlString = ref('')
 
@@ -45,8 +51,8 @@ const useUmlCodeSingle = () => {
     }
   }
 
-  const setCurrentHtml = (code?: string) => {
-    const { md } = convertToMd(code || state.umlCode.code, { server: import.meta.env.VITE_PLANTUML_SERVER })
+  const setCurrentHtml = (code?: UmlCode['code']) => {
+    const { md } = convertToMd(code || state.umlCode.code, { server: import.meta.env.VITE_PLANTUML_SERVER, ext: state.imgExt })
     htmlString.value = convertToHtml(md)
   }
 
@@ -54,21 +60,31 @@ const useUmlCodeSingle = () => {
     if (!state.umlCode.id) {
       return
     }
-    const { md, imgs } = convertToMd(code, { server: import.meta.env.VITE_PLANTUML_SERVER })
+    const { md, imgs } = convertToMd(code, { server: import.meta.env.VITE_PLANTUML_SERVER, ext: state.imgExt })
     state.umlCode.imgs = imgs
     // imgs を更新するため
     await update(code)
     htmlString.value = convertToHtml(md)
   }
 
+  const changeImgExt = (ext: ImgExts) => {
+    if (!state.umlCode.id) {
+      return
+    }
+    state.imgExt = ext
+    setCurrentHtml(state.umlCode.code)
+  }
+
   return {
     current: computed(() => state.umlCode),
+    currentImgExt: computed(() => state.imgExt),
     htmlString: computed(() => htmlString.value),
     read,
     readCache,
     getCode,
     update,
     destroy,
+    changeImgExt,
     setCurrentHtml,
     renderHtml
   }

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { convertToMd, createUmlTag, parser } from '../../lib/UmlCodeConverter'
+import { convertToMd, createUmlTagPNG, createUmlTagSVG, parser } from '../../lib/UmlCodeConverter'
 
 describe('UmlCodeParser', () => {
   describe('parser', () => {
@@ -41,23 +41,23 @@ describe('UmlCodeParser', () => {
   })
   describe('convertToMd', () => {
     const uml = '@startuml\n\nobject テスト\n\n@enduml'
-    const img = 'http://localhost/svg/SoWkIImgAStDuUBAJyfAJIvHUDpSzhXfv-Fc3YukXzIy5A0K0000'
-    const encoded = createUmlTag(img)
+    const svgImg = 'http://localhost/svg/SoWkIImgAStDuUBAJyfAJIvHUDpSzhXfv-Fc3YukXzIy5A0K0000'
+    const svgTag = createUmlTagSVG(svgImg)
 
     it('UMLが一つの場合', () => {
       const code = `# スタート\n\n${uml}\n\n# エンド`
       const { md, imgs } = convertToMd(code, { server: 'http://localhost' })
-      expect(md).toBe(`# スタート\n\n${encoded}\n\n# エンド`)
+      expect(md).toBe(`# スタート\n\n${svgTag}\n\n# エンド`)
       expect(imgs.length).toBe(1)
-      expect(imgs[0]).toBe(img)
+      expect(imgs[0]).toBe(svgImg)
     })
     it('UMLが2つの場合', () => {
       const code = `# スタート\n\n${uml}\n\n# エンド\n\n${uml}`
       const { md, imgs } = convertToMd(code, { server: 'http://localhost' })
-      expect(md).toBe(`# スタート\n\n${encoded}\n\n# エンド\n\n${encoded}`)
+      expect(md).toBe(`# スタート\n\n${svgTag}\n\n# エンド\n\n${svgTag}`)
       expect(imgs.length).toBe(2)
-      expect(imgs[0]).toBe(img)
-      expect(imgs[1]).toBe(img)
+      expect(imgs[0]).toBe(svgImg)
+      expect(imgs[1]).toBe(svgImg)
     })
     it('@startuml がない場合', () => {
       const code = '# スタート\n\nテスト\n\n@enduml\n\n# エンド'
@@ -72,6 +72,15 @@ describe('UmlCodeParser', () => {
       expect(md).toBe(code)
       expect(imgs.length).toBe(0)
       expect(imgs[0]).toBe(undefined)
+    })
+    it('PNG の場合', () => {
+      const code = `# スタート\n\n${uml}\n\n# エンド`
+      const pngImg = 'http://localhost/png/SoWkIImgAStDuUBAJyfAJIvHUDpSzhXfv-Fc3YukXzIy5A0K0000'
+      const pngTag = createUmlTagPNG(pngImg)
+      const { md, imgs } = convertToMd(code, { server: 'http://localhost', ext: 'png' })
+      expect(md).toBe(`# スタート\n\n${pngTag}\n\n# エンド`)
+      expect(imgs.length).toBe(1)
+      expect(imgs[0]).toBe(svgImg) // imgs は svg 固定
     })
   })
 })
