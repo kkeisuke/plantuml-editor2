@@ -13,7 +13,7 @@ const onChange = () => {
 </script>
 
 <template>
-  <div class="form-check form-switch m-0">
+  <div class="form-check form-switch mb-0">
     <input id="CheatSheetSwitch" v-model="cheatSheetSwitch" class="form-check-input" type="checkbox" role="button" @change="onChange" />
     <label class="form-check-label text-white-50" for="CheatSheetSwitch" role="button">Cheat Sheets</label>
   </div>
