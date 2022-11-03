@@ -94,7 +94,7 @@
     },
     "nodeblock": {
       "title": "node block",
-      "text": "node Node [\nnode\n]"
+      "text": "node Node [\n  node\n]"
     },
     "database": {
       "title": "database",
@@ -103,7 +103,7 @@
     },
     "databaseblock": {
       "title": "database block",
-      "text": "database DB [\nDB\n]"
+      "text": "database DB [\n  DB\n]"
     },
     "storage": {
       "title": "storage",
@@ -112,12 +112,16 @@
     },
     "storageblock": {
       "title": "storage block",
-      "text": "storage Storage [\nstorage\n]"
+      "text": "storage Storage [\n  storage\n]"
     },
     "component": {
       "title": "component",
       "text": "[Component]",
       "img": "UDfpA2v9B2efpStXuefspiyjoCzBpIk9vU9oICrB0Oe20BAT2nK0"
+    },
+    "skinparamawesome": {
+      "title": "skinparam\nawesome",
+      "text": "skinparam actorStyle awesome"
     },
     "skinparammonochrome": {
       "title": "skinparam\nmonochrome",
@@ -141,6 +145,10 @@
     }
   },
   "usecase": {
+    "package": {
+      "title": "package",
+      "text": "package Job {\n  usecase \"xxxx\" as name\n}"
+    },
     "rectangle": {
       "title": "rectangle",
       "text": "rectangle Job {\n\n}"

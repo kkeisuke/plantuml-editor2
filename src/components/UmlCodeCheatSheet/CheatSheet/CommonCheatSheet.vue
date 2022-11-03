@@ -194,6 +194,14 @@ const url = `${import.meta.env.VITE_PLANTUML_SERVER}/svg/`
           </td>
         </tr>
         <tr>
+          <td>
+            {{ common.skinparamawesome.title }}
+          </td>
+          <td>
+            <copyable-code>{{ common.skinparamawesome.text }}</copyable-code>
+          </td>
+        </tr>
+        <tr>
           <td rowspan="2">
             {{ common.skinparammonochrome.title }}
           </td>

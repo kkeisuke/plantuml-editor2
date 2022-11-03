@@ -10,6 +10,12 @@ import CopyableCode from '@/components/UmlCodeCheatSheet/CopyableCode.vue'
     <table class="table table-bordered table-hover">
       <tbody>
         <tr>
+          <td>{{ usecase.package.title }}</td>
+          <td>
+            <copyable-pre>{{ usecase.package.text }}</copyable-pre>
+          </td>
+        </tr>
+        <tr>
           <td>{{ usecase.rectangle.title }}</td>
           <td>
             <copyable-pre>{{ usecase.rectangle.text }}</copyable-pre>
