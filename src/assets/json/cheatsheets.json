@@ -198,6 +198,10 @@
     "partition": {
       "title": "partition",
       "text": "partition A {\n\n}"
+    },
+    "group": {
+      "title": "group",
+      "text": "group A\n\nend group"
     }
   },
   "sequence": {

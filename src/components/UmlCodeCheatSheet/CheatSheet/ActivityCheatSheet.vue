@@ -38,6 +38,12 @@ import CopyablePre from '@/components/UmlCodeCheatSheet/CopyablePre.vue'
             <copyable-pre>{{ activity.partition.text }}</copyable-pre>
           </td>
         </tr>
+        <tr>
+          <td>{{ activity.group.title }}</td>
+          <td>
+            <copyable-pre>{{ activity.group.text }}</copyable-pre>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>
