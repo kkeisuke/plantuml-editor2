@@ -4,7 +4,7 @@ const startuml = ['@startuml', '@startmindmap', '@startditaa', '@startgantt', '@
 const enduml = ['@enduml', '@endmindmap', '@endditaa', '@endgantt', '@endwbs', '@endjson', '@endyaml']
 export const imgExts = ['svg', 'png'] as const
 
-export type ImgExts = typeof imgExts[number]
+export type ImgExts = (typeof imgExts)[number]
 
 export const parser = (code: string) => {
   const lines = code.split('\n')
