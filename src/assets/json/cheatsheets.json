@@ -68,6 +68,14 @@
       "title": "note block",
       "text": "note left of A\n\nend note"
     },
+    "notefloating": {
+      "title": "note floating",
+      "text": "floating note:"
+    },
+    "notefloatingblock": {
+      "title": "note floating block",
+      "text": "floating note\n\nend note"
+    },
     "actor": {
       "title": "actor",
       "text": "actor",

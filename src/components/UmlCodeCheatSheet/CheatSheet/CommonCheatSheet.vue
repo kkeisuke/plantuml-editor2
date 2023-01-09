@@ -102,7 +102,7 @@ const url = `${import.meta.env.VITE_PLANTUML_SERVER}/svg/`
           </td>
         </tr>
         <tr>
-          <td rowspan="3">note</td>
+          <td rowspan="5">note</td>
           <td>
             <copyable-code>{{ common.noteleft.text }}</copyable-code> note
           </td>
@@ -115,6 +115,16 @@ const url = `${import.meta.env.VITE_PLANTUML_SERVER}/svg/`
         <tr>
           <td>
             <copyable-pre>{{ common.noteblock.text }}</copyable-pre>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <copyable-code>{{ common.notefloating.text }}</copyable-code> note
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <copyable-pre>{{ common.notefloatingblock.text }}</copyable-pre>
           </td>
         </tr>
         <tr>
