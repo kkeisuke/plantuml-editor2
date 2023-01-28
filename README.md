@@ -9,6 +9,11 @@ PlantUML online demo client
 
 ![PlantUML Editor 2](https://repository-images.githubusercontent.com/441818722/9774f41a-5a82-427d-a2ef-3c0ca27526e1)
 
+## Do you also like Mermaid ?
+
+- https://github.com/kkeisuke/mermaid-editor
+- https://mermaid-editor.kkeisuke.dev/
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
