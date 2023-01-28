@@ -23,7 +23,7 @@ export const useAddUmlCode = () => {
   const { add, fetch } = injectUseUmlCodeCollection()
   const { read, getCode, renderHtml } = injectUseUmlCodeSingle()
 
-  const addNewUmlCOde = async (temp: keyof typeof templates) => {
+  const addNewUmlCode = async (temp: keyof typeof templates) => {
     const id = await add(templates[temp])
     await read(id)
     await renderHtml(getCode())
@@ -31,6 +31,6 @@ export const useAddUmlCode = () => {
   }
 
   return {
-    addNewUmlCOde
+    addNewUmlCode
   }
 }
