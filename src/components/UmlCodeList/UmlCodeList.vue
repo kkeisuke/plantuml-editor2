@@ -11,13 +11,14 @@ const { selectUmlCode, deleteUmlCode } = useSelectUmlCode()
 const { umlCodes, fetch } = injectUseUmlCodeCollection()
 const { current } = injectUseUmlCodeSingle()
 
-// 初回表示
-fetch()
-
 // 更新を一覧に反映させる
-watch(current.value, async () => {
-  await fetch()
-})
+watch(
+  current.value,
+  async () => {
+    await fetch()
+  },
+  { immediate: true }
+)
 </script>
 
 <template>
@@ -38,8 +39,7 @@ watch(current.value, async () => {
 </template>
 
 <style scoped>
-li:hover,
-li.current {
+li:is(:hover, .current) {
   background-color: var(--bs-gray-300);
 }
 img {

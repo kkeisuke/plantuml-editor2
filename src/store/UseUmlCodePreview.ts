@@ -16,7 +16,7 @@ export const useUmlCodePreview = () => {
   }
 
   return {
-    imgSize: computed(() => imgSize.value / DEFAULT_IMG_SIZE),
+    imgSize: computed(() => imgSize.value / 100),
     addImgSize
   }
 }
